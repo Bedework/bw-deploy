@@ -59,52 +59,8 @@ try {
 
     <fetchPublicCalendars><genurl:rewrite action="fetchPublicCalendars"/></fetchPublicCalendars>
     <fetchCalendars><genurl:rewrite action="fetchCalendars"/></fetchCalendars>
-
-    <!-- The following URLs are used only in the personal client -->
-    <logic:equal name="calForm" property="guest" value="false">
-      <initEvent><genurl:rewrite action="initEvent.do?b=de"/></initEvent>
-      <addEventUsingPage><genurl:rewrite action="addEventUsingPage.do?b=de"/></addEventUsingPage>
-      <editEvent><genurl:rewrite action="editEvent.do?b=de"/></editEvent>
-      <delEvent><genurl:rewrite action="delEvent.do?b=de"/></delEvent>
-      <event>
-        <addEventRefComplete><genurl:link page="/event/addEventRefComplete.do?b=de"/></addEventRefComplete>
-        <selectCalForEvent><genurl:link page="/event/selectCalForEvent.do?b=de"/></selectCalForEvent>
-      </event>
-
-      <freeBusy>
-        <fetch><genurl:link page="/freeBusy/getFreeBusy.do?b=de"/></fetch>
-      </freeBusy>
-
-      <calendar>
-        <fetch><genurl:link page="/calendar/showUpdateList.rdo?b=de"/></fetch><!-- keep -->
-        <fetchDescriptions><genurl:link page="/calendar/showDescriptionList.rdo?b=de"/></fetchDescriptions><!-- keep -->
-        <initAdd><genurl:link page="/calendar/initAdd.do?b=de"/></initAdd><!-- keep -->
-        <delete><genurl:link page="/calendar/delete.do?b=de"/></delete>
-        <fetchForDisplay><genurl:link page="/calendar/fetchForDisplay.do?b=de"/></fetchForDisplay>
-        <fetchForUpdate><genurl:link page="/calendar/fetchForUpdate.do?b=de"/></fetchForUpdate><!-- keep -->
-        <update><genurl:link page="/calendar/update.do?b=de"/></update><!-- keep -->
-      </calendar>
-
-      <subscriptions> <!-- only those listed are used here (no need to clean up) -->
-        <fetch><genurl:link page="/subs/fetch.do?b=de"/></fetch>
-        <fetchForUpdate><genurl:link page="/subs/fetchForUpdate.do?b=de"/></fetchForUpdate>
-        <addSubByUri><genurl:link page="/subs/showAddByUriForm.rdo?b=de"/></addSubByUri>
-        <subscribeByUri><genurl:link page="/subs/subscribeByUri.do?b=de"/></subscribeByUri>
-        <initAdd><genurl:link page="/subs/initAdd.do?b=de"/></initAdd>
-        <subscribe><genurl:link page="/subs/subscribe.do?b=de"/></subscribe>
-      </subscriptions>
-
-      <prefs>
-        <fetchForUpdate><genurl:link page="/prefs/fetchForUpdate.do?b=de"/></fetchForUpdate>
-        <update><genurl:link page="/prefs/update.do?b=de"/></update>
-      </prefs>
-
-      <initEventAlarm><genurl:rewrite action="initEventAlarm.do?b=de"/></initEventAlarm>
-      <setAlarm><genurl:rewrite action="setAlarm.do?b=de"/></setAlarm>
-      <addEventRef><genurl:rewrite action="addEventRef.do?b=de"/></addEventRef>
-      <upload><genurl:rewrite action="upload.do?b=de"/></upload>
-    </logic:equal>
   </urlPrefixes>
+
   <confirmationid><bean:write name="calForm" property="confirmationId"/></confirmationid><%--
         Value: String - a 16 character random string used to allow users to confirm
         additions to thier private calendar --%>

@@ -229,21 +229,12 @@ try {
         <refresh><bw:rewrite actionURL="true" page="/schedule/refresh.do?b=de"/></refresh>
       </schedule>
 
-      <freeBusy>
-        <fetch><bw:rewrite actionURL="true" page="/freeBusy/getFreeBusy.do?b=de"/></fetch>
-      </freeBusy>
-
       <calendar>
         <fetch><bw:rewrite renderURL="true" page="/calendar/showUpdateList.rdo?b=de"/></fetch>
         <fetchDescriptions><bw:rewrite renderURL="true" page="/calendar/showDescriptionList.rdo?b=de"/></fetchDescriptions>
         <initAdd><bw:rewrite actionURL="true" page="/calendar/initAdd.do?b=de"/></initAdd>
-        <delete><bw:rewrite actionURL="true" page="/calendar/delete.do?b=de"/></delete>
         <fetchForDisplay><bw:rewrite actionURL="true" page="/calendar/fetchForDisplay.do?b=de"/></fetchForDisplay>
-        <fetchForUpdate><bw:rewrite actionURL="true" page="/calendar/fetchForUpdate.do?b=de"/></fetchForUpdate>
-        <update><bw:rewrite actionURL="true" page="/calendar/update.do?b=de"/></update>
         <listForExport><bw:rewrite renderURL="true" page="/calendar/listForExport.rdo?b=de"/></listForExport>
-        <setPropsInGrid><bw:rewrite actionURL="true" page="/calendar/setPropsInGrid.do?b=de"/></setPropsInGrid>
-        <setPropsInList><bw:rewrite actionURL="true" page="/calendar/setPropsInList.do?b=de"/></setPropsInList>
       </calendar>
 
       <category>
@@ -273,12 +264,6 @@ try {
         <upload><bw:rewrite actionURL="true" page="/misc/upload.do?b=de"/></upload>
         <initUpload><bw:rewrite renderURL="true" page="/misc/initUpload.rdo?b=de"/></initUpload>
       </misc>
-
-      <alarm>
-        <initEventAlarm><bw:rewrite actionURL="true" page="/alarm/initEventAlarm.do?b=de"/></initEventAlarm>
-        <setAlarm><bw:rewrite actionURL="true" page="/alarm/setAlarm.do?b=de"/></setAlarm>
-      </alarm>
-
     </logic:equal>
   </urlPrefixes>
 

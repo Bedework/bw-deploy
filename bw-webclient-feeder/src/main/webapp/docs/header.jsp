@@ -134,36 +134,6 @@ try {
     <stats>
       <stats><bw:rewrite actionURL="true" page="/stats/stats.do?b=de"/></stats>
     </stats>
-
-    <%-- The following URLs are used only in the personal client --%>
-    <%-- ======================================================= --%>
-    <logic:equal name="calForm" property="guest" value="false">
-      <event>
-        <initEvent><bw:rewrite actionURL="true" page="/event/initEvent.do?b=de"/></initEvent>
-        <addEvent><bw:rewrite actionURL="true" page="/event/addEvent.do?b=de"/></addEvent>
-        <attendeesForEvent><bw:rewrite actionURL="true" page="/event/attendeesForEvent.do?b=de"/></attendeesForEvent>
-        <showAttendeesForEvent><bw:rewrite renderURL="true" page="/event/showAttendeesForEvent.rdo?b=de"/></showAttendeesForEvent>
-        <initMeeting><bw:rewrite actionURL="true" page="/event/initMeeting.do?b=de"/></initMeeting>
-        <editEvent><bw:rewrite actionURL="true" page="/event/editEvent.do?b=de"/></editEvent>
-        <gotoEditEvent><bw:rewrite actionURL="true" page="/event/gotoEditEvent.do?b=de"/></gotoEditEvent>
-        <delInboxEvent><bw:rewrite actionURL="true" page="/event/delInboxEvent.do?b=de"/></delInboxEvent>
-        <showAccess><bw:rewrite renderURL="true" page="/event/showAccess.rdo?b=de"/></showAccess>
-        <addEventRefComplete><bw:rewrite actionURL="true" page="/event/addEventRefComplete.do?b=de"/></addEventRefComplete>
-      </event>
-
-      <freeBusy>
-        <fetch><bw:rewrite actionURL="true" page="/freeBusy/getFreeBusy.do?b=de"/></fetch>
-      </freeBusy>
-
-      <calendar>
-        <fetchDescriptions><bw:rewrite renderURL="true" page="/calendar/showDescriptionList.rdo?b=de"/></fetchDescriptions>
-        <initAdd><bw:rewrite actionURL="true" page="/calendar/initAdd.do?b=de"/></initAdd>
-        <fetchForDisplay><bw:rewrite actionURL="true" page="/calendar/fetchForDisplay.do?b=de"/></fetchForDisplay>
-        <listForExport><bw:rewrite renderURL="true" page="/calendar/listForExport.rdo?b=de"/></listForExport>
-        <setPropsInGrid><bw:rewrite actionURL="true" page="/calendar/setPropsInGrid.do?b=de"/></setPropsInGrid>
-        <setPropsInList><bw:rewrite actionURL="true" page="/calendar/setPropsInList.do?b=de"/></setPropsInList>
-      </calendar>
-    </logic:equal>
   </urlPrefixes>
 
   <confirmationid><bean:write name="calForm" property="confirmationId"/></confirmationid><%--

@@ -71,19 +71,11 @@ try {
         <selectCalForEvent><genurl:link page="/event/selectCalForEvent.do?b=de"/></selectCalForEvent>
       </event>
 
-      <freeBusy>
-        <fetch><genurl:link page="/freeBusy/getFreeBusy.do?b=de"/></fetch>
-        <setAccess><genurl:link page="/freeBusy/setAccess.do?b=de"/></setAccess>
-      </freeBusy>
-
       <calendar>
         <fetch><genurl:link page="/calendar/showUpdateList.rdo?b=de"/></fetch><!-- keep -->
         <fetchDescriptions><genurl:link page="/calendar/showDescriptionList.rdo?b=de"/></fetchDescriptions><!-- keep -->
         <initAdd><genurl:link page="/calendar/initAdd.do?b=de"/></initAdd><!-- keep -->
-        <delete><genurl:link page="/calendar/delete.do?b=de"/></delete>
         <fetchForDisplay><genurl:link page="/calendar/fetchForDisplay.do?b=de"/></fetchForDisplay>
-        <fetchForUpdate><genurl:link page="/calendar/fetchForUpdate.do?b=de"/></fetchForUpdate><!-- keep -->
-        <update><genurl:link page="/calendar/update.do?b=de"/></update><!-- keep -->
         <setAccess><genurl:link page="/calendar/setAccess.do?b=de"/></setAccess>
       </calendar>
 
@@ -101,8 +93,6 @@ try {
         <update><genurl:link page="/prefs/update.do?b=de"/></update>
       </prefs>
 
-      <initEventAlarm><genurl:rewrite action="initEventAlarm.do?b=de"/></initEventAlarm>
-      <setAlarm><genurl:rewrite action="setAlarm.do?b=de"/></setAlarm>
       <addEventRef><genurl:rewrite action="addEventRef.do?b=de"/></addEventRef>
       <upload><genurl:rewrite action="upload.do?b=de"/></upload>
     </logic:equal>
