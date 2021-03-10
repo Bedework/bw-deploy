@@ -74,7 +74,7 @@
   <!-- ========== Form Bean Definitions ================================ -->
   <form-beans>
     <form-bean      name="calForm"
-                    type="org.bedework.webcommon.BwActionFormBase"/>
+                    type="org.bedework.client.web.admin.BwAdminActionForm"/>
   </form-beans>
 
   <!-- ========== Global Forward Definitions ===========================
@@ -1767,7 +1767,7 @@
 
 
     <action    path="/authuser/showUpdateList"
-               type="org.bedework.webcommon.authuser.AuthUserListRenderAction"
+               type="org.bedework.client.web.admin.authuser.AuthUserListRenderAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1776,7 +1776,7 @@
     </action>
 
     <action    path="/authuser/initUpdate"
-               type="org.bedework.webcommon.authuser.GetAuthUsersAction"
+               type="org.bedework.client.web.admin.authuser.GetAuthUsersAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1785,7 +1785,7 @@
     </action>
 
     <action    path="/authuser/fetchForUpdate"
-               type="org.bedework.webcommon.authuser.FetchAuthAction"
+               type="org.bedework.client.web.admin.authuser.FetchAuthAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1795,7 +1795,7 @@
     </action>
 
     <action    path="/authuser/update"
-               type="org.bedework.webcommon.authuser.UpdateAuthAction"
+               type="org.bedework.client.web.admin.authuser.UpdateAuthAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
