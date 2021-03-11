@@ -324,7 +324,7 @@
        ............................................................... -->
 
     <action    path="/event/fetchForDisplay"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.admin.event.AdminFetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -339,7 +339,7 @@
        ............................................................... -->
 
     <action    path="/event/fetchForUpdate"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.admin.event.AdminFetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -380,7 +380,7 @@
        ............................................................... -->
 
     <action    path="/event/initAddEvent"
-               type="org.bedework.webcommon.event.InitAddEventAction"
+               type="org.bedework.client.web.admin.event.AdminInitAddEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -470,7 +470,7 @@
     </action>
 
     <action    path="/event/fetchForUpdatePending"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.admin.event.AdminFetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -532,7 +532,7 @@
     </action>
 
     <action    path="/event/fetchForUpdateApprovalQueue"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.admin.event.AdminFetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -569,7 +569,7 @@
     </action>
 
     <action    path="/event/fetchForUpdateSuggestionQueue"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.admin.event.AdminFetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -1896,7 +1896,7 @@
     </action>
 
     <action    path="/admingroup/initAdd"
-               type="org.bedework.webcommon.admingroup.InitAddAGAction"
+               type="org.bedework.client.web.admin.admingroup.InitAddAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1905,7 +1905,7 @@
     </action>
 
     <action    path="/admingroup/initUpdate"
-               type="org.bedework.webcommon.admingroup.InitUpdateAGAction"
+               type="org.bedework.client.web.admin.admingroup.InitUpdateAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1914,7 +1914,7 @@
     </action>
 
     <action    path="/admingroup/delete"
-               type="org.bedework.webcommon.admingroup.DeleteAGAction"
+               type="org.bedework.client.web.admin.admingroup.DeleteAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1926,7 +1926,7 @@
     </action>
 
     <action    path="/admingroup/fetchForUpdate"
-               type="org.bedework.webcommon.admingroup.FetchAGAction"
+               type="org.bedework.client.web.admin.admingroup.FetchAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1936,7 +1936,7 @@
     </action>
 
     <action    path="/admingroup/fetchForUpdateMembers"
-               type="org.bedework.webcommon.admingroup.FetchAGAction"
+               type="org.bedework.client.web.admin.admingroup.FetchAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1946,7 +1946,7 @@
     </action>
 
     <action    path="/admingroup/update"
-               type="org.bedework.webcommon.admingroup.UpdateAGAction"
+               type="org.bedework.client.web.admin.admingroup.UpdateAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1958,7 +1958,7 @@
     </action>
 
     <action    path="/admingroup/updateMembers"
-               type="org.bedework.webcommon.admingroup.UpdateAGAction"
+               type="org.bedework.client.web.admin.admingroup.UpdateAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1970,7 +1970,7 @@
     </action>
 
     <action    path="/admingroup/switch"
-               type="org.bedework.webcommon.admingroup.SwitchAGAction"
+               type="org.bedework.client.web.admin.admingroup.SwitchAGAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
