@@ -127,10 +127,6 @@ try {
       <async><bw:rewrite renderURL="true" page="/misc/async.do?b=de"/></async>
     </misc>
 
-    <mail>
-      <mailEvent><bw:rewrite actionURL="true" page="/mail/mailEvent.do?b=de"/></mailEvent>
-    </mail>
-
     <stats>
       <stats><bw:rewrite actionURL="true" page="/stats/stats.do?b=de"/></stats>
     </stats>
@@ -189,10 +185,6 @@ try {
       <bw:emitText name="dir" property="venuePrincipalRoot" />
     </logic:present>
   </syspars>
-
-  <logic:present name="calForm" property="imageUploadDirectory" >
-    <bw:emitText name="calForm" property="imageUploadDirectory" />
-  </logic:present>
 
   <logic:present name="bw_feature_flags" scope="session" >
       <featureFlags><bean:write name="bw_feature_flags" scope="session" /></featureFlags>

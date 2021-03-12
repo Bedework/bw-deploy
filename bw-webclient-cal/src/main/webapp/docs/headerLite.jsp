@@ -43,7 +43,6 @@ try {
     <%-- render urls --%>
     <initialise><genurl:rewrite forward="initialise"/></initialise>
     <eventMore><genurl:rewrite forward="eventMore"/></eventMore>
-    <initUpload><genurl:rewrite forward="initUpload"/></initUpload>
 
     <%-- action urls --%>
     <setup><genurl:rewrite action="setup.do?b=de"/></setup>
@@ -51,7 +50,6 @@ try {
     <setSelectionList><genurl:rewrite action="setSelectionList.do?b=de"/></setSelectionList>
     <setViewPeriod><genurl:rewrite action="setViewPeriod.do?b=de"/></setViewPeriod>
     <eventView><genurl:rewrite action="eventView.do?b=de"/></eventView>
-    <mailEvent><genurl:rewrite action="mailEvent.do?b=de"/></mailEvent>
     <showPage><genurl:rewrite action="showPage.do?b=de"/></showPage>
 
     <export><genurl:link page="/export.gdo?b=de"/></export>
