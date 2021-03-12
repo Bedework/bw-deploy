@@ -1033,7 +1033,7 @@
 
 
     <action    path="/calsuite/showCalSuites"
-               type="org.bedework.webcommon.AdminRenderAction"
+               type="org.bedework.client.web.admin.AdminRenderAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1052,7 +1052,7 @@
 
 
     <action    path="/calsuite/showModForm"
-               type="org.bedework.webcommon.calsuite.RenderCalSuiteAction"
+               type="org.bedework.client.web.admin.calsuite.RenderCalSuiteAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1062,7 +1062,7 @@
     </action>
 
     <action    path="/calsuite/fetchForUpdate"
-               type="org.bedework.webcommon.calsuite.FetchCalSuiteAction"
+               type="org.bedework.client.web.admin.calsuite.FetchCalSuiteAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1071,7 +1071,7 @@
     </action>
 
     <action    path="/calsuite/addCalSuite"
-               type="org.bedework.webcommon.calsuite.AddCalSuiteAction"
+               type="org.bedework.client.web.admin.calsuite.AddCalSuiteAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1083,7 +1083,7 @@
     </action>
 
     <action    path="/calsuite/update"
-               type="org.bedework.webcommon.calsuite.UpdateCalSuiteAction"
+               type="org.bedework.client.web.admin.calsuite.UpdateCalSuiteAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1154,7 +1154,7 @@
          =============================================================== -->
 
     <action    path="/suggest/setStatus"
-               type="org.bedework.webcommon.event.SuggestAction"
+               type="org.bedework.client.web.admin.event.SuggestAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=only;mdl=suggest"
@@ -1162,7 +1162,7 @@
     </action>
 
     <action    path="/suggest/setStatusForUpdate"
-               type="org.bedework.webcommon.event.SuggestAction"
+               type="org.bedework.client.web.admin.event.SuggestAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -1252,7 +1252,7 @@
          =============================================================== -->
 
     <action    path="/resource/showResources"
-               type="org.bedework.webcommon.resources.RenderResourcesAction"
+               type="org.bedework.client.web.admin.resources.RenderResourcesAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1260,7 +1260,7 @@
       <forward name="success" path="/docs/resource/viewResources.jsp"/>
     </action>
     <action    path="/resource/showResource"
-               type="org.bedework.webcommon.resources.RenderResourceAction"
+               type="org.bedework.client.web.admin.resources.RenderResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=render;conversation=end"
@@ -1276,7 +1276,7 @@
       <forward name="success" path="/docs/resource/deleteConfirm.jsp"/>
     </action>
     <action    path="/resource/addResource"
-               type="org.bedework.webcommon.resources.AddResourceAction"
+               type="org.bedework.client.web.admin.resources.AddResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -1286,7 +1286,7 @@
       <forward name="success" path="/resource/showResource.rdo" redirect="true" />
     </action>
     <action    path="/resource/editResource"
-               type="org.bedework.webcommon.resources.EditResourceAction"
+               type="org.bedework.client.web.admin.resources.EditResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1294,7 +1294,7 @@
       <forward name="success" path="/resource/showResource.rdo" redirect="true" />
     </action>
     <action    path="/resource/updateResource"
-               type="org.bedework.webcommon.resources.UpdateResourceAction"
+               type="org.bedework.client.web.admin.resources.UpdateResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1305,7 +1305,7 @@
       <forward name="success" path="/resource/showResource.rdo" redirect="true" />
     </action>
     <action    path="/resource/removeResource"
-               type="org.bedework.webcommon.resources.RemoveResourceAction"
+               type="org.bedework.client.web.admin.resources.RemoveResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1321,7 +1321,7 @@
          =============================================================== -->
 
     <action    path="/globalres/showResources"
-               type="org.bedework.webcommon.resources.RenderGlobalResourcesAction"
+               type="org.bedework.client.web.admin.resources.RenderGlobalResourcesAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1329,7 +1329,7 @@
       <forward name="success" path="/docs/resource/viewGlobalResources.jsp"/>
     </action>
     <action    path="/globalres/showResource"
-               type="org.bedework.webcommon.resources.RenderResourceAction"
+               type="org.bedework.client.web.admin.resources.RenderResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1347,7 +1347,7 @@
       <forward name="success" path="/docs/resource/deleteConfirmGlobal.jsp"/>
     </action>
     <action    path="/globalres/addResource"
-               type="org.bedework.webcommon.resources.AddResourceAction"
+               type="org.bedework.client.web.admin.resources.AddResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1358,7 +1358,7 @@
       <forward name="success" path="/globalres/showResource.rdo" redirect="true" />
     </action>
     <action    path="/globalres/editResource"
-               type="org.bedework.webcommon.resources.EditResourceAction"
+               type="org.bedework.client.web.admin.resources.EditResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1366,7 +1366,7 @@
       <forward name="success" path="/globalres/showResource.rdo" redirect="true" />
     </action>
     <action    path="/globalres/updateResource"
-               type="org.bedework.webcommon.resources.UpdateResourceAction"
+               type="org.bedework.client.web.admin.resources.UpdateResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1378,7 +1378,7 @@
       <forward name="success" path="/globalres/showResources.rdo" redirect="true" />
     </action>
     <action    path="/globalres/removeResource"
-               type="org.bedework.webcommon.resources.RemoveResourceAction"
+               type="org.bedework.client.web.admin.resources.RemoveResourceAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1846,7 +1846,7 @@
 
 
     <action    path="/admingroup/showChooseGroup"
-               type="org.bedework.webcommon.AdminRenderAction"
+               type="org.bedework.client.web.admin.AdminRenderAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
