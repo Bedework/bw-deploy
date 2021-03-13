@@ -73,7 +73,7 @@
   <!-- ========== Form Bean Definitions =================================== -->
   <form-beans>
     <form-bean      name="calForm"
-                    type="org.bedework.webcommon.BwActionFormBase"/>
+                    type="org.bedework.client.web.rw.BwRWActionForm"/>
   </form-beans>
 
   <!-- ========== Global Forward Definitions ============================== -->
@@ -342,7 +342,7 @@
        ............................................................... -->
 
     <action    path="/event/editEvent"
-               type="org.bedework.webcommon.event.FetchEventAction"
+               type="org.bedework.client.web.rw.event.FetchEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -361,7 +361,7 @@
     </action>
 
     <action    path="/event/updateEvent"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -399,7 +399,7 @@
        ............................................................... -->
 
     <action    path="/event/initEvent"
-               type="org.bedework.webcommon.event.InitAddEventAction"
+               type="org.bedework.client.web.rw.event.InitAddEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -418,7 +418,7 @@
     </action>
 
     <action    path="/event/addEvent"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -497,7 +497,7 @@
     </action>
 
     <action    path="/event/addEventRefComplete"
-               type="org.bedework.webcommon.event.AddEventRefAction"
+               type="org.bedework.client.web.rw.event.AddEventRefAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -530,7 +530,7 @@
     </action>
 
     <action    path="/event/addEventSubComplete"
-               type="org.bedework.webcommon.event.AddEventSubAction"
+               type="org.bedework.client.web.rw.event.AddEventSubAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -545,7 +545,7 @@
        =============================================================== -->
 
     <action    path="/event/initMeeting"
-               type="org.bedework.webcommon.event.InitAddEventAction"
+               type="org.bedework.client.web.rw.event.InitAddEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -593,7 +593,7 @@
 
     <!-- Get the freebusy for a list of attendees -->
     <action    path="/event/requestFreeBusy"
-               type="org.bedework.webcommon.schedule.RequestFreeBusy"
+               type="org.bedework.client.web.rw.schedule.RequestFreeBusy"
                name="calForm"
                scope="session"
                parameter="actionType=resource;conversation=continue"
@@ -640,7 +640,7 @@
          ............................................................... -->
 
     <action    path="/schedule/initAttendeeReply"
-               type="org.bedework.webcommon.schedule.ProcessInboxEvent"
+               type="org.bedework.client.web.rw.schedule.ProcessInboxEvent"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -661,7 +661,7 @@
 
     <!-- XXX Conversation may not work if we forward to edit -->
     <action    path="/schedule/processAttendeeReply"
-               type="org.bedework.webcommon.schedule.AttendeeReply"
+               type="org.bedework.client.web.rw.schedule.AttendeeReply"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -677,7 +677,7 @@
          ............................................................... -->
 
     <action    path="/schedule/initAttendeeRespond"
-               type="org.bedework.webcommon.schedule.ProcessInboxEvent"
+               type="org.bedework.client.web.rw.schedule.ProcessInboxEvent"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -697,7 +697,7 @@
     </action>
 
     <action    path="/schedule/initAttendeeUpdate"
-               type="org.bedework.webcommon.schedule.ProcessInboxEvent"
+               type="org.bedework.client.web.rw.schedule.ProcessInboxEvent"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -707,7 +707,7 @@
     </action>
 
     <action    path="/schedule/changeStatus"
-               type="org.bedework.webcommon.schedule.AttendeeRespond"
+               type="org.bedework.client.web.rw.schedule.AttendeeRespond"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -718,7 +718,7 @@
 
     <!-- Conversation may not work if we get a validation error -->
     <action    path="/schedule/attendeeRespond"
-               type="org.bedework.webcommon.schedule.AttendeeRespond"
+               type="org.bedework.client.web.rw.schedule.AttendeeRespond"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=end"
@@ -733,7 +733,7 @@
          ............................................................... -->
 
     <action    path="/schedule/refresh"
-               type="org.bedework.webcommon.schedule.AttendeeRespond"
+               type="org.bedework.client.web.rw.schedule.AttendeeRespond"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -759,7 +759,7 @@
     <!-- ........... PERSONAL client only ...... -->
 
     <action    path="/misc/initUpload"
-               type="org.bedework.webcommon.misc.InitUploadAction"
+               type="org.bedework.client.web.rw.misc.InitUploadAction"
                name="calForm"
                scope="session"
                parameter="actionType=render;conversation=only"
@@ -769,7 +769,7 @@
 
     <!--  Action called by the upload form -->
     <action    path="/misc/upload"
-               type="org.bedework.webcommon.misc.UploadAction"
+               type="org.bedework.client.web.rw.misc.UploadAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -1073,7 +1073,7 @@
     </action>
 
     <action    path="/freeBusy/getFreeBusy"
-               type="org.bedework.webcommon.misc.FreeBusyAction"
+               type="org.bedework.client.web.rw.misc.FreeBusyAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1431,7 +1431,7 @@
          =============================================================== -->
 
     <action    path="/vpoll/initManageVpoll"
-               type="org.bedework.webcommon.schedule.ProcessInboxEvent"
+               type="org.bedework.client.web.rw.schedule.ProcessInboxEvent"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -1441,7 +1441,7 @@
     </action>
 
     <action    path="/vpoll/managePolls"
-               type="org.bedework.webcommon.VpollAction"
+               type="org.bedework.client.web.rw.VpollAction"
                name="calForm"
                scope="session"
                parameter="actionType=render;conversation=end;refinterval=1500"

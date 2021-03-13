@@ -361,7 +361,7 @@
     </action>
 
     <action    path="/event/update"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -427,7 +427,7 @@
     </action>
 
     <action    path="/event/upload"
-               type="org.bedework.webcommon.misc.UploadAction"
+               type="org.bedework.client.web.rw.misc.UploadAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -483,7 +483,7 @@
     </action>
 
     <action    path="/event/updatePending"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -545,7 +545,7 @@
     </action>
 
     <action    path="/event/updateApprovalQueue"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -582,7 +582,7 @@
     </action>
 
     <action    path="/event/updateSuggestionQueue"
-               type="org.bedework.webcommon.event.UpdateEventAction"
+               type="org.bedework.client.web.rw.event.UpdateEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
