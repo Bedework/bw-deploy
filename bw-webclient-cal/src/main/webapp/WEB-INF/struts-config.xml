@@ -435,16 +435,6 @@
                          Contact Actions
          =============================================================== -->
 
-    <action    path="/contact/fetchForDisplay"
-               type="org.bedework.webcommon.contact.FetchContactAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="notFound" path="/main/showMain.rdo" redirect="true" />
-      <forward name="continue" path="/contact/showContact.rdo" redirect="true" />
-    </action>
-
     <!-- Must be a gdo action - returns json -->
     <action    path="/contact/all"
                type="org.bedework.webcommon.contact.FetchContactsAction"
@@ -527,24 +517,6 @@
       <forward name="success" path="/calendar/showCalendarForExport.rdo" redirect="true" />
     </action>
 
-    <action    path="/calendar/showCalendar"
-               type="org.bedework.webcommon.calendars.RenderCalendarAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=render"
-               validate="false">
-      <forward name="success" path="/docs/calendar/displayCalendar.jsp"/>
-    </action>
-
-    <action    path="/calendar/fetchForDisplay"
-               type="org.bedework.webcommon.NoopAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="success" path="/calendar/showCalendar.rdo" redirect="true" />
-    </action>
-
     <!-- === display a page of descriptions for public calendars (not currently used) === -->
 
     <action    path="/calendar/showDescriptionList"
@@ -554,68 +526,6 @@
                parameter="actionType=render"
                validate="false">
       <forward name="success" path="/docs/calendar/calendarDescriptions.jsp"/>
-    </action>
-
-    <!-- ===============================================================
-                       Notifications
-         =============================================================== -->
-
-    <!-- The following two actions do the same thing, and differ only by their
-         conversation= parameter. The first action is used when no
-         transaction is running; the second is used in the middle of a transaction
-         (e.g. a form is being filled). -->
-    <action    path="/notify/remove"
-               type="org.bedework.webcommon.notifications.RemoveAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=only;mdl=remove"
-               validate="false">
-      <forward name="notFound" path="/widget/ajaxTerminator.rdo" redirect="true" />
-      <forward name="success" path="/widget/ajaxTerminator.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/removeTrans"
-               type="org.bedework.webcommon.notifications.RemoveAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=continue"
-               validate="false">
-      <forward name="notFound" path="/widget/ajaxTerminator.rdo" redirect="true" />
-      <forward name="success" path="/widget/ajaxTerminator.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/get"
-               type="org.bedework.webcommon.notifications.GetNotificationsAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;mdl=notify;conversation=only"
-               validate="false">
-      <forward name="success" path="/notify/show.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/show"
-               type="org.bedework.webcommon.RenderAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=render"
-               validate="false">
-      <forward name="success" path="/docs/notifications/notifications.jsp"/>
-    </action>
-
-    <action    path="/notify/removeAll"
-               type="org.bedework.webcommon.notifications.RemoveAllAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=only"
-               validate="false">
-    </action>
-
-    <action    path="/notify/subscribe"
-               type="org.bedework.webcommon.notifications.SubscribeAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;mdl=notify;conversation=only"
-               validate="false">
     </action>
 
     <!-- ===============================================================

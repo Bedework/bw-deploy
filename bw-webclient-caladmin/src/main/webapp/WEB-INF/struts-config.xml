@@ -680,7 +680,7 @@
     </action>
 
     <action    path="/calendar/initAdd"
-               type="org.bedework.webcommon.calendars.InitAddCalendarAction"
+               type="org.bedework.client.web.rw.calendars.InitAddCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -721,7 +721,7 @@
     </action>
 
     <action    path="/calendar/delete"
-               type="org.bedework.webcommon.calendars.DeleteCalendarAction"
+               type="org.bedework.client.web.rw.calendars.DeleteCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -733,7 +733,7 @@
     </action>
 
     <action    path="/calendar/move"
-               type="org.bedework.webcommon.calendars.MoveCalendarAction"
+               type="org.bedework.client.web.rw.calendars.MoveCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -921,7 +921,7 @@
     </action>
 
     <action    path="/subs/initAdd"
-               type="org.bedework.webcommon.calendars.InitAddCalendarAction"
+               type="org.bedework.client.web.rw.calendars.InitAddCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -953,7 +953,7 @@
     </action>
 
     <action    path="/subs/delete"
-               type="org.bedework.webcommon.calendars.DeleteCalendarAction"
+               type="org.bedework.client.web.rw.calendars.DeleteCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -1394,7 +1394,7 @@
          =============================================================== -->
 
     <action    path="/timezones/fix"
-               type="org.bedework.webcommon.timezones.FixTimezonesAction"
+               type="org.bedework.client.web.admin.timezones.FixTimezonesAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1409,7 +1409,7 @@
 
 
     <action    path="/contact/showContact"
-               type="org.bedework.webcommon.contact.RenderEditableContactsAction"
+               type="org.bedework.client.web.admin.contact.RenderEditableContactsAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1439,7 +1439,7 @@
 
 
     <action    path="/contact/showUpdateList"
-               type="org.bedework.webcommon.contact.RenderEditableContactsAction"
+               type="org.bedework.client.web.admin.contact.RenderEditableContactsAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1458,7 +1458,7 @@
     </action>
 
     <action    path="/contact/initAdd"
-               type="org.bedework.webcommon.contact.InitAddContactAction"
+               type="org.bedework.client.web.rw.contact.InitAddContactAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1476,7 +1476,7 @@
     </action>
 
     <action    path="/contact/delete"
-               type="org.bedework.webcommon.contact.DeleteContactAction"
+               type="org.bedework.client.web.rw.contact.DeleteContactAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1488,7 +1488,7 @@
     </action>
 
     <action    path="/contact/fetchForDisplay"
-               type="org.bedework.webcommon.contact.FetchContactAction"
+               type="org.bedework.client.web.rw.contact.FetchContactAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1498,7 +1498,7 @@
     </action>
 
     <action    path="/contact/fetchForUpdate"
-               type="org.bedework.webcommon.contact.FetchContactAction"
+               type="org.bedework.client.web.rw.contact.FetchContactAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1508,7 +1508,7 @@
     </action>
 
     <action    path="/contact/update"
-               type="org.bedework.webcommon.contact.UpdateContactAction"
+               type="org.bedework.client.web.rw.contact.UpdateContactAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1527,7 +1527,7 @@
 
     <!-- Must be a gdo action - returns json -->
     <action    path="/location/addsub"
-               type="org.bedework.webcommon.location.AddSubLocationAction"
+               type="org.bedework.client.web.admin.location.AddSubLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=resource;conversation=only"
@@ -1593,7 +1593,7 @@
     </action>
 
     <action    path="/location/initAdd"
-               type="org.bedework.webcommon.location.InitAddLocationAction"
+               type="org.bedework.client.web.rw.location.InitAddLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1602,7 +1602,7 @@
     </action>
 
     <action    path="/location/initUpdate"
-               type="org.bedework.webcommon.location.InitUpdateAction"
+               type="org.bedework.client.web.rw.location.InitUpdateAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1611,7 +1611,7 @@
     </action>
 
     <action    path="/location/delete"
-               type="org.bedework.webcommon.location.DeleteLocationAction"
+               type="org.bedework.client.web.rw.location.DeleteLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1624,7 +1624,7 @@
     </action>
 
     <action    path="/location/fetchForDisplay"
-               type="org.bedework.webcommon.location.FetchLocationAction"
+               type="org.bedework.client.web.rw.location.FetchLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1634,7 +1634,7 @@
     </action>
 
     <action    path="/location/fetchForUpdate"
-               type="org.bedework.webcommon.location.FetchLocationAction"
+               type="org.bedework.client.web.rw.location.FetchLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1644,7 +1644,7 @@
     </action>
 
     <action    path="/location/update"
-               type="org.bedework.webcommon.location.UpdateLocationAction"
+               type="org.bedework.client.web.rw.location.UpdateLocationAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1700,7 +1700,7 @@
     </action>
 
     <action    path="/category/initAdd"
-               type="org.bedework.webcommon.category.InitAddCategoryAction"
+               type="org.bedework.client.web.rw.category.InitAddCategoryAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1718,7 +1718,7 @@
     </action>
 
     <action    path="/category/delete"
-               type="org.bedework.webcommon.category.DeleteCategoryAction"
+               type="org.bedework.client.web.rw.category.DeleteCategoryAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1730,7 +1730,7 @@
     </action>
 
     <action    path="/category/fetchForUpdate"
-               type="org.bedework.webcommon.category.FetchCategoryAction"
+               type="org.bedework.client.web.rw.category.FetchCategoryAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1740,7 +1740,7 @@
     </action>
 
     <action    path="/category/update"
-               type="org.bedework.webcommon.category.UpdateCategoryAction"
+               type="org.bedework.client.web.rw.category.UpdateCategoryAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"

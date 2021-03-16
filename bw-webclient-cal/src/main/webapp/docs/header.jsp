@@ -169,16 +169,6 @@ try {
       <fetchForExport><bw:rewrite actionURL="true" page="/calendar/fetchForExport.do?b=de"/></fetchForExport>
     </calendar>
 
-    <sharing>
-      <shareCollection><bw:rewrite actionURL="true" page="/sharing/sharecol.do?b=de"/></shareCollection>
-      <reply><bw:rewrite actionURL="true" page="/sharing/reply.do?b=de"/></reply>
-    </sharing>
-
-    <notifications>
-      <remove><bw:rewrite actionURL="true" page="/notify/remove.do?b=de"/></remove>
-      <removeTrans><bw:rewrite actionURL="true" page="/notify/removeTrans.do?b=de"/></removeTrans>
-    </notifications>
-
     <search>
       <search><bw:rewrite renderURL="true" page="/search/search.rdo?b=de"/></search>
       <next><bw:rewrite actionURL="true" page="/search/next.do?b=de"/></next>
