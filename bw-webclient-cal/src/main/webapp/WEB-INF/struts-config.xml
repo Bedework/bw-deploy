@@ -379,43 +379,6 @@
     </action>
 
     <!-- ===============================================================
-                          Filters
-         =============================================================== -->
-
-  <!-- ...............................................................
-           Add a filter
-       ............................................................... -->
-
-    <action    path="/filter/add"
-               type="org.bedework.webcommon.filter.AddFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="error" path="/main/showMain.rdo" redirect="true" />
-      <forward name="notAdded" path="/main/showMain.rdo" redirect="true" />
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <action    path="/filter/set"
-               type="org.bedework.webcommon.filter.SetFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <action    path="/filter/delete"
-               type="org.bedework.webcommon.filter.DeleteFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <!-- ===============================================================
                          Category Actions
          =============================================================== -->
 

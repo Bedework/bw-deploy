@@ -773,7 +773,7 @@
     </action>
 
     <action    path="/calendar/update"
-               type="org.bedework.webcommon.calendars.UpdateCalendarAction"
+               type="org.bedework.client.web.rw.calendars.UpdateCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -816,7 +816,7 @@
 
 
     <action    path="/filter/getFilters"
-               type="org.bedework.webcommon.filter.GetFiltersAction"
+               type="org.bedework.client.web.rw.filter.GetFiltersAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -834,7 +834,7 @@
     </action>
 
     <action    path="/filter/add"
-               type="org.bedework.webcommon.filter.AddFilterAction"
+               type="org.bedework.client.web.rw.filter.AddFilterAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -847,7 +847,7 @@
     </action>
 
     <action    path="/filter/set"
-               type="org.bedework.webcommon.filter.SetFilterAction"
+               type="org.bedework.client.web.rw.filter.SetFilterAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=only"
@@ -857,7 +857,7 @@
     </action>
 
     <action    path="/filter/delete"
-               type="org.bedework.webcommon.filter.DeleteFilterAction"
+               type="org.bedework.client.web.rw.filter.DeleteFilterAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=start"
@@ -931,7 +931,7 @@
 
 
     <action    path="/subs/update"
-               type="org.bedework.webcommon.calendars.UpdateCalendarAction"
+               type="org.bedework.client.web.rw.calendars.UpdateCalendarAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"
@@ -974,7 +974,7 @@
          transaction is running; the second is used in the middle of a transaction
          (e.g. a form is being filled). -->
     <action    path="/notify/remove"
-               type="org.bedework.webcommon.notifications.RemoveAction"
+               type="org.bedework.client.web.rw.notifications.RemoveAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=only;mdl=remove"
@@ -984,7 +984,7 @@
     </action>
 
     <action    path="/notify/removeTrans"
-               type="org.bedework.webcommon.notifications.RemoveAction"
+               type="org.bedework.client.web.rw.notifications.RemoveAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=only;mdl=remove"
@@ -994,7 +994,7 @@
     </action>
 
     <action    path="/notify/get"
-               type="org.bedework.webcommon.notifications.GetNotificationsAction"
+               type="org.bedework.client.web.rw.notifications.GetNotificationsAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;mdl=notify;conversation=only"
@@ -1012,7 +1012,7 @@
     </action>
 
     <action    path="/notify/removeAll"
-               type="org.bedework.webcommon.notifications.RemoveAllAction"
+               type="org.bedework.client.web.rw.notifications.RemoveAllAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;mdl=notify;conversation=only"
@@ -1020,7 +1020,7 @@
     </action>
 
     <action    path="/notify/subscribe"
-               type="org.bedework.webcommon.notifications.SubscribeAction"
+               type="org.bedework.client.web.rw.notifications.SubscribeAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;mdl=notify;conversation=only"
@@ -1121,7 +1121,7 @@
     </action>
 
     <action    path="/calsuite/fetchPrefsForUpdate"
-               type="org.bedework.webcommon.pref.FetchPrefsAction"
+               type="org.bedework.client.web.rw.pref.FetchPrefsAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1131,7 +1131,7 @@
     </action>
 
     <action    path="/calsuite/updatePrefs"
-               type="org.bedework.webcommon.pref.UpdatePrefsAction"
+               type="org.bedework.client.web.rw.pref.UpdatePrefsAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1185,7 +1185,7 @@
 
 
     <action    path="/view/showModForm"
-               type="org.bedework.webcommon.views.RenderViewAction"
+               type="org.bedework.client.web.rw.views.RenderViewAction"
                name="calForm"
                scope="session"
                parameter="actionType=render"
@@ -1205,7 +1205,7 @@
     </action>
 
     <action    path="/view/fetchForUpdate"
-               type="org.bedework.webcommon.views.SetViewNameAction"
+               type="org.bedework.client.web.rw.views.SetViewNameAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1216,7 +1216,7 @@
     </action>
 
     <action    path="/view/update"
-               type="org.bedework.webcommon.views.UpdateViewAction"
+               type="org.bedework.client.web.rw.views.UpdateViewAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1226,7 +1226,7 @@
     </action>
 
     <action    path="/view/addView"
-               type="org.bedework.webcommon.views.AddViewAction"
+               type="org.bedework.client.web.rw.views.AddViewAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1236,7 +1236,7 @@
     </action>
 
     <action    path="/view/removeView"
-               type="org.bedework.webcommon.views.DeleteViewAction"
+               type="org.bedework.client.web.rw.views.DeleteViewAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1820,7 +1820,7 @@
     </action>
 
     <action    path="/prefs/fetchForUpdate"
-               type="org.bedework.webcommon.pref.FetchPrefsAction"
+               type="org.bedework.client.web.rw.pref.FetchPrefsAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"
@@ -1830,7 +1830,7 @@
     </action>
 
     <action    path="/prefs/update"
-               type="org.bedework.webcommon.pref.UpdatePrefsAction"
+               type="org.bedework.client.web.rw.pref.UpdatePrefsAction"
                name="calForm"
                scope="session"
                parameter="actionType=action"

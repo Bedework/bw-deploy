@@ -228,13 +228,6 @@ try {
       <featureFlags><bean:write name="bw_feature_flags" scope="session" /></featureFlags>
   </logic:present>
 
-  <notifications>
-    <logic:present name="calForm" property="notificationInfo" >
-      <bean:define id="notificationInfo" name="calForm" property="notificationInfo" />
-      <%@include file="/docs/notifications/notificationInfo.jsp"%>
-    </logic:present>
-  </notifications>
-
   <selectionState><%--
     What type of information have we selected to display?  Used to
     branch between different templates in the xsl based on user selections. --%>

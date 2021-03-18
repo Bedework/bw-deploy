@@ -379,43 +379,6 @@
     </action>
 
     <!-- ===============================================================
-                          Filters
-         =============================================================== -->
-
-  <!-- ...............................................................
-           Add a filter
-       ............................................................... -->
-
-    <action    path="/filter/add"
-               type="org.bedework.webcommon.filter.AddFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="error" path="/main/showMain.rdo" redirect="true" />
-      <forward name="notAdded" path="/main/showMain.rdo" redirect="true" />
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <action    path="/filter/set"
-               type="org.bedework.webcommon.filter.SetFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <action    path="/filter/delete"
-               type="org.bedework.webcommon.filter.DeleteFilterAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=start"
-               validate="false">
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <!-- ===============================================================
                          Category Actions
          =============================================================== -->
 
@@ -462,14 +425,6 @@
          =============================================================== -->
 
     <!-- ........... PUBLIC and PERSONAL clients ...... -->
-
-    <action    path="/publish/calendar"
-               type="org.bedework.webcommon.misc.WebCalendarAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=resource"
-               validate="false">
-    </action>
 
     <action    path="/calendar/showPublicCals"
                type="org.bedework.webcommon.RenderAction"
@@ -525,33 +480,6 @@
       <forward name="success" path="/calendar/showCalendarForExport.rdo" redirect="true" />
     </action>
 
-    <action    path="/calendar/showCalendar"
-               type="org.bedework.webcommon.calendars.RenderCalendarAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=render"
-               validate="false">
-      <forward name="success" path="/docs/calendar/displayCalendar.jsp"/>
-    </action>
-
-    <action    path="/calendar/fetchForDisplay"
-               type="org.bedework.webcommon.NoopAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="success" path="/calendar/showCalendar.rdo" redirect="true" />
-    </action>
-
-    <action    path="/calendar/listForExport"
-               type="org.bedework.webcommon.RenderAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=render"
-               validate="false">
-      <forward name="success" path="/docs/calendar/calendarListForExport.jsp"/>
-    </action>
-
     <!-- === display a page of descriptions for public calendars (not currently used) === -->
 
     <action    path="/calendar/showDescriptionList"
@@ -561,110 +489,6 @@
                parameter="actionType=render"
                validate="false">
       <forward name="success" path="/docs/calendar/calendarDescriptions.jsp"/>
-    </action>
-
-    <!-- ===============================================================
-                       Sharing
-         =============================================================== -->
-
-    <action    path="/sharing/sharecol"
-               type="org.bedework.webcommon.sharing.ShareCollectionAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="continue" path="/calendar/showModForm.rdo" redirect="true" />
-    </action>
-
-    <action    path="/sharing/reply"
-               type="org.bedework.webcommon.sharing.ShareReplyAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="continue" path="/main/showMain.rdo" redirect="true" />
-      <forward name="success" path="/main/showMain.rdo" redirect="true" />
-    </action>
-
-    <action    path="/sharing/publish"
-               type="org.bedework.webcommon.sharing.PublishCollectionAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="continue" path="/calendar/showModForm.rdo" redirect="true" />
-    </action>
-
-    <action    path="/sharing/subscribe"
-               type="org.bedework.webcommon.sharing.SubscribeAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action"
-               validate="false">
-      <forward name="continue" path="/calendar/showUpdateList.rdo" redirect="true" />
-      <forward name="success" path="/calendar/showUpdateList.rdo" redirect="true" />
-    </action>
-
-    <!-- ===============================================================
-                       Notifications
-         =============================================================== -->
-
-    <!-- The following two actions do the same thing, and differ only by their
-         conversation= parameter. The first action is used when no
-         transaction is running; the second is used in the middle of a transaction
-         (e.g. a form is being filled). -->
-    <action    path="/notify/remove"
-               type="org.bedework.webcommon.notifications.RemoveAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=only;mdl=remove"
-               validate="false">
-      <forward name="notFound" path="/widget/ajaxTerminator.rdo" redirect="true" />
-      <forward name="success" path="/widget/ajaxTerminator.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/removeTrans"
-               type="org.bedework.webcommon.notifications.RemoveAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=continue"
-               validate="false">
-      <forward name="notFound" path="/widget/ajaxTerminator.rdo" redirect="true" />
-      <forward name="success" path="/widget/ajaxTerminator.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/get"
-               type="org.bedework.webcommon.notifications.GetNotificationsAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;mdl=notify;conversation=only"
-               validate="false">
-      <forward name="success" path="/notify/show.rdo" redirect="true" />
-    </action>
-
-    <action    path="/notify/show"
-               type="org.bedework.webcommon.RenderAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=render"
-               validate="false">
-      <forward name="success" path="/docs/notifications/notifications.jsp"/>
-    </action>
-
-    <action    path="/notify/removeAll"
-               type="org.bedework.webcommon.notifications.RemoveAllAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;conversation=only"
-               validate="false">
-    </action>
-
-    <action    path="/notify/subscribe"
-               type="org.bedework.webcommon.notifications.SubscribeAction"
-               name="calForm"
-               scope="session"
-               parameter="actionType=action;mdl=notify;conversation=only"
-               validate="false">
     </action>
 
     <!-- ===============================================================
