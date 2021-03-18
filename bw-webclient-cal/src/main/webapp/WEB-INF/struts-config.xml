@@ -80,7 +80,6 @@
   <global-forwards>
     <!-- render forwards -->
     <forward name="initialise" path="/main/initialise.rdo"/>
-    <forward name="showEditEvent" path="/event/showEditEvent.rdo"/>
     <forward name="eventMore" path="/event/showEventMore.rdo"/>
 
     <!-- Forward for a new session from some bookmarked link; used by
