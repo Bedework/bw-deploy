@@ -367,7 +367,7 @@
        ............................................................... -->
 
     <action    path="/event/delEvent"
-               type="org.bedework.webcommon.event.DeleteEventAction"
+               type="org.bedework.client.web.rw.event.DeleteEventAction"
                name="calForm"
                scope="session"
                parameter="actionType=action;conversation=continue"

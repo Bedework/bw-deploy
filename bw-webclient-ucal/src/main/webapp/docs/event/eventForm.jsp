@@ -224,18 +224,6 @@ try {
   </logic:present>
 </editableAccess>
 
-<%-- Output of timezones is deprecated; now call the timezone server --%>
-<%--
-<timezones>
-  <logic:iterate id="tz" name="calForm" property="timeZoneNames">
-    <timezone>
-      <name><bean:write name="tz" property="name" filter="true"/></name>
-      <id><bean:write name="tz" property="id" filter="true"/></id>
-    </timezone>
-  </logic:iterate>
-</timezones>
---%>
-
 <%
 } catch (Throwable t) {
   t.printStackTrace();
