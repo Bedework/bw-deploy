@@ -1134,10 +1134,10 @@
                type="org.bedework.client.web.rw.pref.UpdatePrefsAction"
                name="calForm"
                scope="session"
-               parameter="actionType=action"
+               parameter="actionType=action;conversation=only"
                validate="false">
       <forward name="cancelled" path="/main/showCalsuiteTab.rdo" redirect="true" />
-      <forward name="retry" path="/calsuite/showModPrefsForm.rdo" />
+      <forward name="retry" path="/calsuite/showModPrefsForm.rdo" redirect="true" />
       <forward name="success" path="/main/showCalsuiteTab.rdo" redirect="true" />
     </action>
 

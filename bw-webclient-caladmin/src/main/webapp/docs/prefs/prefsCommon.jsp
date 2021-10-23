@@ -27,6 +27,7 @@
   <bw:emitText name="userPrefs" property="pageSize"/>
   <bw:emitText name="userPrefs" property="adminResourcesDirectory"/>
   <bw:emitText name="userPrefs" property="suiteResourcesDirectory"/>
+  <bw:emitText name="userPrefs" property="categoryMapping"/>
   <bw:emitText name="userPrefs" property="calsuiteApprovers"/>
   <approvers>
     <logic:iterate id="approver" name="userPrefs" property="calsuiteApproversList">
