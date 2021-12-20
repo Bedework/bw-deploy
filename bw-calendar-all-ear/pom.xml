@@ -2,14 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <artifactId>bw-deploy</artifactId>
     <groupId>org.bedework</groupId>
-    <version>3.14.0-SNAPSHOT</version>
+    <version>4.0.0-SNAPSHOT</version>
   </parent>
-  <modelVersion>4.0.0</modelVersion>
 
   <artifactId>bw-calendar-all-ear</artifactId>
+  <name>Bedework: deploy all calendar ears</name>
   <packaging>ear</packaging>
 
   <dependencies>
@@ -104,88 +106,92 @@
     <finalName>bw-cal-${project.version}</finalName>
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-ear-plugin</artifactId>
-        <version>2.10</version>
+
         <configuration>
-          <!-- Exclude eclipse generated application.xml during mvn package -->
-          <earSourceExcludes>**/application.xml</earSourceExcludes>
-          <defaultLibBundleDir>lib</defaultLibBundleDir>
-          <skinnyWars>true</skinnyWars>
-          <!-- use maven generated application.xml instead -->
-          <generateApplicationXml>true</generateApplicationXml>
-          <unpackTypes>sar,rar,war</unpackTypes>
           <modules>
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-cal</artifactId>
               <contextRoot>/cal</contextRoot>
+              <bundleFileName>bw-webclient-cal-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-caladmin</artifactId>
               <contextRoot>/caladmin</contextRoot>
+              <bundleFileName>bw-webclient-caladmin-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-calauth</artifactId>
               <contextRoot>/calauth</contextRoot>
+              <bundleFileName>bw-webclient-calauth-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-feeder</artifactId>
               <contextRoot>/feeder</contextRoot>
+              <bundleFileName>bw-webclient-feeder-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-submit</artifactId>
               <contextRoot>/eventsubmit</contextRoot>
+              <bundleFileName>bw-webclient-submit-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-webclient-ucal</artifactId>
               <contextRoot>/ucal</contextRoot>
+              <bundleFileName>bw-webclient-ucal-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-notifyws</artifactId>
               <contextRoot>/notifyws</contextRoot>
+              <bundleFileName>bw-calendar-notifyws-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-pubcaldav</artifactId>
               <contextRoot>/pubcaldav</contextRoot>
+              <bundleFileName>bw-calendar-pubcaldav-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-publicws</artifactId>
               <contextRoot>/pubcalws</contextRoot>
+              <bundleFileName>bw-calendar-publicws-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-synchws</artifactId>
               <contextRoot>/synchws</contextRoot>
+              <bundleFileName>bw-calendar-synchws-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-ucaldav</artifactId>
               <contextRoot>/ucaldav</contextRoot>
+              <bundleFileName>bw-calendar-ucaldav-${project.version}.war</bundleFileName>
             </webModule>
 
             <webModule>
               <groupId>org.bedework</groupId>
               <artifactId>bw-calendar-userws</artifactId>
               <contextRoot>/ucalws</contextRoot>
+              <bundleFileName>bw-calendar-userws-${project.version}.war</bundleFileName>
             </webModule>
           </modules>
         </configuration>
@@ -194,20 +200,8 @@
       <plugin>
         <groupId>org.bedework</groupId>
         <artifactId>bw-util-maven-deploy</artifactId>
-        <version>${bw-util-deploy.version}</version>
-        <executions>
-          <execution>
-            <phase>install</phase>
-            <goals>
-              <goal>bw-deploy</goal>
-            </goals>
-          </execution>
-        </executions>
+
         <configuration>
-          <checkonly>${org.bedework.deploy.checkonly}</checkonly>
-          <debug>true</debug>
-          <noversion>true</noversion>
-          <delete>true</delete>
           <earName>bw-cal</earName>
           <baseDirPath>${org.bedework.deployment.basedir}</baseDirPath>
           <propsPath>${org.bedework.deployment.properties}</propsPath>
