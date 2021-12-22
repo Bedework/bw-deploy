@@ -11,7 +11,7 @@
   </parent>
 
   <artifactId>bw-calendar-all-ear</artifactId>
-  <name>Bedework: deploy all calendar ears</name>
+  <name>Bedework: deploy all calendar ear</name>
   <packaging>ear</packaging>
 
   <dependencies>

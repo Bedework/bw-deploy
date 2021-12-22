@@ -28,5 +28,6 @@
     <module>bw-webclient-caladmin</module>
     <module>bw-webclient-cal</module>
     <module>bw-calendar-all-ear</module>
+    <module>bw-calendar-ro-ear</module>
   </modules>
 </project>
