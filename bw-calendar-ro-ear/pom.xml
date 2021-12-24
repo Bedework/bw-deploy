@@ -52,6 +52,11 @@
               <bundleFileName>bw-webclient-feeder-${project.version}.war</bundleFileName>
             </webModule>
           </modules>
+          <archive>
+            <manifestEntries>
+              <Dependencies>org.bedework.calendar.ro-ear</Dependencies>
+            </manifestEntries>
+          </archive>
         </configuration>
       </plugin>
 
