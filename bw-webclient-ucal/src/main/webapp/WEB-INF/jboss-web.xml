@@ -13,6 +13,6 @@
   <resource-ref>
     <res-ref-name>jms/BedeworkConnectionFactory</res-ref-name>
     <res-type>javax.jms.ConnectionFactory</res-type>
-    <jndi-name>${app.activemq.jndi-name}</jndi-name>
+    <jndi-name>java:/jms/BedeworkConnectionFactory</jndi-name>
   </resource-ref>
 </jboss-web>
