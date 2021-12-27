@@ -22,5 +22,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="bw-webclient-cal" />
     <orderEntry type="module" module-name="bw-webclient-feeder" />
+    <orderEntry type="module" module-name="bw-calendar-pubcaldav" />
   </component>
 </module>
